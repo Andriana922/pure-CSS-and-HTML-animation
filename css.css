@@ -1,0 +1,35 @@
+body {
+    background-color: orange;
+}
+
+#road {
+    border-bottom: 7px dashed black;
+}
+
+#runner {
+    background: url("https://www.codeandweb.com/blog/2016/05/10/how-to-create-a-sprite-sheet/spritestrip.png");
+    width: 256px;
+    height: 250px;
+    animation: walk 1s steps(12) infinite,
+        forward 5s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: 3095px;
+    }
+}
+
+@keyframes forward {
+    0% {
+        transform: translateX(-500px);
+    }
+
+    100% {
+        transform: translateX(1200px);
+    }
+}
